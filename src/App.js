@@ -1,6 +1,7 @@
 import { Component } from "react";
 import React from "react";
-import s from "./App.css";
+import s from "./App.module.css";
+import api from "./articlesApi";
 
 export default class App extends Component {
   state = {
@@ -11,9 +12,7 @@ export default class App extends Component {
 
   componentDidMount() {
     this.setState({ loading: true });
-    fetch(
-      "https://vaska171717.fakturownia.pl/invoices.json?period=all&api_token=XKQiL2BafpNsI7Qfgy7&"
-    )
+    api()
       .then((res) => {
         if (res.ok) {
           return res.json();
@@ -28,47 +27,67 @@ export default class App extends Component {
   render() {
     const { data, loading, error } = this.state;
 
-    const elements = data.map((item) => (
-      <li key={item.id} className="list">
-        <div className="faktura">
-          <h2>Faktura numer: {item.number}</h2>
-          <p>
-            Sprzedawca: <b>{item.seller_name}</b>
-          </p>
-          <p>{item.seller_street}</p>
-          <p>{item.seller_post_code}</p>
-          <p>{item.seller_city}</p>
-          <p>NIP: {item.seller_tax_no}</p>
-        </div>
-        <div>
-          <h3>Nabywca: {item.buyer_name}</h3>
-          <p>{item.buyer_street}</p>
-          <p>{item.buyer_post_code}</p>
-          <p>{item.buyer_city}</p>
-          <h4>Nazwa towaru / usługi: {item.product_cache}</h4>
-          <p>
-            Wartość netto:
-            {item.price_net}
-            {item.currency}
-          </p>
+    const elements = data.map(
+      ({
+        id,
+        number,
+        seller_post_code,
+        seller_name,
+        seller_street,
+        seller_city,
+        seller_tax_no,
+        buyer_name,
+        buyer_street,
+        buyer_post_code,
+        buyer_city,
+        product_cache,
+        price_net,
+        currency,
+        price_tax,
+        price_gross,
+        buyer_person,
+      }) => (
+        <li key={id} className={s.list}>
+          <div className={s.faktura}>
+            <h2>Faktura numer: {number}</h2>
+            <p>
+              Sprzedawca: <b>{seller_name}</b>
+            </p>
+            <p>{seller_street}</p>
+            <p>{seller_post_code}</p>
+            <p>{seller_city}</p>
+            <p>NIP: {seller_tax_no}</p>
+          </div>
+          <div>
+            <h3>Nabywca: {buyer_name}</h3>
+            <p>{buyer_street}</p>
+            <p>{buyer_post_code}</p>
+            <p>{buyer_city}</p>
+            <h4>Nazwa towaru / usługi: {product_cache}</h4>
+            <p>
+              Wartość netto:
+              {price_net}
+              {currency}
+            </p>
 
-          <p>
-            Wartość VAT:
-            {item.price_tax}
-            {item.currency}
-          </p>
+            <p>
+              Wartość VAT:
+              {price_tax}
+              {currency}
+            </p>
 
-          <p>
-            Wartość brutto:
-            {item.price_gross}
-            {item.currency}
-          </p>
-          <p>
-            <b>Imię i nazwisko odbiorcy: {item.buyer_person}</b>
-          </p>
-        </div>
-      </li>
-    ));
+            <p>
+              Wartość brutto:
+              {price_gross}
+              {currency}
+            </p>
+            <p>
+              <b>Imię i nazwisko odbiorcy: {buyer_person}</b>
+            </p>
+          </div>
+        </li>
+      )
+    );
     return (
       <div>
         {error && <h1>Brak faktury za wykonaną usługę</h1>}
