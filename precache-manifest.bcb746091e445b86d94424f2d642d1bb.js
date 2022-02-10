@@ -1,7 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "511853cfef0ca9deb0bd77a3db5b0f6f",
+    "revision": "24f349fc480be3e3b69e69c9aaaa3366",
     "url": "/wygenerowanie-faktur/index.html"
+  },
+  {
+    "revision": "83e2b104f8a54d7ba39c",
+    "url": "/wygenerowanie-faktur/static/css/main.2dc795d5.chunk.css"
   },
   {
     "revision": "f7e024a286fa1e27c19f",
@@ -12,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/wygenerowanie-faktur/static/js/2.15d0fe18.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b08fb927ea9eb42647a1",
-    "url": "/wygenerowanie-faktur/static/js/main.f98bd157.chunk.js"
+    "revision": "83e2b104f8a54d7ba39c",
+    "url": "/wygenerowanie-faktur/static/js/main.cb8e4f1b.chunk.js"
   },
   {
     "revision": "606472fdbbbad068bfa0",

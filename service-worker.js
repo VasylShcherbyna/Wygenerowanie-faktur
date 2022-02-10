@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/wygenerowanie-faktur/precache-manifest.12a94afb05e6aae5e37348d22a17e490.js"
+  "/wygenerowanie-faktur/precache-manifest.bcb746091e445b86d94424f2d642d1bb.js"
 );
 
 self.addEventListener('message', (event) => {

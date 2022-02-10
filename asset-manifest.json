@@ -1,19 +1,22 @@
 {
   "files": {
-    "main.js": "/wygenerowanie-faktur/static/js/main.f98bd157.chunk.js",
-    "main.js.map": "/wygenerowanie-faktur/static/js/main.f98bd157.chunk.js.map",
+    "main.css": "/wygenerowanie-faktur/static/css/main.2dc795d5.chunk.css",
+    "main.js": "/wygenerowanie-faktur/static/js/main.cb8e4f1b.chunk.js",
+    "main.js.map": "/wygenerowanie-faktur/static/js/main.cb8e4f1b.chunk.js.map",
     "runtime-main.js": "/wygenerowanie-faktur/static/js/runtime-main.fb227f6a.js",
     "runtime-main.js.map": "/wygenerowanie-faktur/static/js/runtime-main.fb227f6a.js.map",
     "static/js/2.15d0fe18.chunk.js": "/wygenerowanie-faktur/static/js/2.15d0fe18.chunk.js",
     "static/js/2.15d0fe18.chunk.js.map": "/wygenerowanie-faktur/static/js/2.15d0fe18.chunk.js.map",
     "index.html": "/wygenerowanie-faktur/index.html",
-    "precache-manifest.12a94afb05e6aae5e37348d22a17e490.js": "/wygenerowanie-faktur/precache-manifest.12a94afb05e6aae5e37348d22a17e490.js",
+    "precache-manifest.bcb746091e445b86d94424f2d642d1bb.js": "/wygenerowanie-faktur/precache-manifest.bcb746091e445b86d94424f2d642d1bb.js",
     "service-worker.js": "/wygenerowanie-faktur/service-worker.js",
+    "static/css/main.2dc795d5.chunk.css.map": "/wygenerowanie-faktur/static/css/main.2dc795d5.chunk.css.map",
     "static/js/2.15d0fe18.chunk.js.LICENSE.txt": "/wygenerowanie-faktur/static/js/2.15d0fe18.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.fb227f6a.js",
     "static/js/2.15d0fe18.chunk.js",
-    "static/js/main.f98bd157.chunk.js"
+    "static/css/main.2dc795d5.chunk.css",
+    "static/js/main.cb8e4f1b.chunk.js"
   ]
 }
