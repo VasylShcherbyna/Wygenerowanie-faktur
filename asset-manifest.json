@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/wygenerowanie-faktur/static/js/main.f98bd157.chunk.js",
+    "main.js.map": "/wygenerowanie-faktur/static/js/main.f98bd157.chunk.js.map",
+    "runtime-main.js": "/wygenerowanie-faktur/static/js/runtime-main.fb227f6a.js",
+    "runtime-main.js.map": "/wygenerowanie-faktur/static/js/runtime-main.fb227f6a.js.map",
+    "static/js/2.15d0fe18.chunk.js": "/wygenerowanie-faktur/static/js/2.15d0fe18.chunk.js",
+    "static/js/2.15d0fe18.chunk.js.map": "/wygenerowanie-faktur/static/js/2.15d0fe18.chunk.js.map",
+    "index.html": "/wygenerowanie-faktur/index.html",
+    "precache-manifest.12a94afb05e6aae5e37348d22a17e490.js": "/wygenerowanie-faktur/precache-manifest.12a94afb05e6aae5e37348d22a17e490.js",
+    "service-worker.js": "/wygenerowanie-faktur/service-worker.js",
+    "static/js/2.15d0fe18.chunk.js.LICENSE.txt": "/wygenerowanie-faktur/static/js/2.15d0fe18.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fb227f6a.js",
+    "static/js/2.15d0fe18.chunk.js",
+    "static/js/main.f98bd157.chunk.js"
+  ]
+}
