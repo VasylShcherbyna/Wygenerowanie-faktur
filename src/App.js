@@ -1,5 +1,6 @@
 import { Component } from "react";
 import React from "react";
+import s from "./App.css";
 
 export default class App extends Component {
   state = {
@@ -26,9 +27,46 @@ export default class App extends Component {
 
   render() {
     const { data, loading, error } = this.state;
+
     const elements = data.map((item) => (
-      <li>
-        <p>{item.number}</p>
+      <li key={item.id} className="list">
+        <div className="faktura">
+          <h2>Faktura numer: {item.number}</h2>
+          <p>
+            Sprzedawca: <b>{item.seller_name}</b>
+          </p>
+          <p>{item.seller_street}</p>
+          <p>{item.seller_post_code}</p>
+          <p>{item.seller_city}</p>
+          <p>NIP: {item.seller_tax_no}</p>
+        </div>
+        <div>
+          <h3>Nabywca: {item.buyer_name}</h3>
+          <p>{item.buyer_street}</p>
+          <p>{item.buyer_post_code}</p>
+          <p>{item.buyer_city}</p>
+          <h4>Nazwa towaru / usługi: {item.product_cache}</h4>
+          <p>
+            Wartość netto:
+            {item.price_net}
+            {item.currency}
+          </p>
+
+          <p>
+            Wartość VAT:
+            {item.price_tax}
+            {item.currency}
+          </p>
+
+          <p>
+            Wartość brutto:
+            {item.price_gross}
+            {item.currency}
+          </p>
+          <p>
+            <b>Imię i nazwisko odbiorcy: {item.buyer_person}</b>
+          </p>
+        </div>
       </li>
     ));
     return (
